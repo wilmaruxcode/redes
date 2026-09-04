@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equilibrio digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="glow glow-a"></div>
+  <div class="glow glow-b"></div>
+  <main id="game" data-screen="start">
+    <header class="title-bar">
+      <span class="blink">●</span> EQUILIBRIO DIGITAL
+      <div class="music-box">
+        <button type="button" id="btn-music" class="btn-music" aria-label="Música">♪ OFF</button>
+        <input id="vol-music" class="vol-music" type="range" min="0" max="100" value="70" aria-label="Volumen">
+      </div>
+    </header>
+
+    <div class="hud hidden" id="hud">
+      <div class="stat" data-stat="redes">
+        <img src="assets/phone.png" alt="">
+        <span>REDES</span>
+        <div class="bar"><i id="bar-redes"></i></div>
+      </div>
+      <div class="stat" data-stat="bienestar">
+        <span>♥ BIENESTAR</span>
+        <div class="bar"><i id="bar-bienestar"></i></div>
+      </div>
+      <div class="stat" data-stat="responsabilidad">
+        <span>✦ TAREAS</span>
+        <div class="bar"><i id="bar-responsabilidad"></i></div>
+      </div>
+    </div>
+
+    <section class="room">
+      <div class="stars"></div>
+      <div class="wall">
+        <div class="window">
+          <div class="moon"></div>
+          <div class="city"></div>
+        </div>
+        <div class="poster p1"></div>
+        <div class="poster p2"></div>
+        <div class="shelf"></div>
+      </div>
+      <div class="floor"></div>
+      <div class="rug"></div>
+      <div class="lamp"></div>
+      <div class="notif">!</div>
+      <div id="confetti" class="confetti" aria-hidden="true"></div>
+      <img id="actor" class="sprite hero" src="assets/hero.png" alt="Estudiante">
+      <img id="buddy" class="sprite friend hidden" src="assets/friend.png" alt="Keith">
+      <div id="keith-tag" class="keith-tag hidden">KEITH</div>
+      <div class="desk">
+        <div class="book b1"></div>
+        <div class="book b2"></div>
+        <div class="book b3"></div>
+        <img class="phone-prop" src="assets/phone.png" alt="Celular">
+        <div class="screen-glow"></div>
+      </div>
+      <div class="scanlines"></div>
+    </section>
+
+    <section class="panel" id="panel">
+      <p id="text"></p>
+      <div class="choices" id="choices"></div>
+    </section>
+  </main>
+  <p class="credits">Sprites CC0: GrafxKid · UI CC0: Kenney.nl · Música: isaiah658 y Jan125</p>
+  <audio id="bgm" src="assets/ambient.ogg" loop preload="auto"></audio>
+  <audio id="piano" src="assets/peace.ogg" loop preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
